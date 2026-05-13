@@ -1,3 +1,11 @@
+![Maven Central Version](https://img.shields.io/maven-central/v/ly.com.tahaben/kmp-flavorizr?style=flat-square)
+![GitHub Repo stars](https://img.shields.io/github/stars/tahaak67/KMP-Flavorizr)
+![GitHub License](https://img.shields.io/github/license/tahaak67/KMP-Flavorizr?style=flat-square)
+![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/tahaak67/KMP-Flavorizr?style=flat-square)
+![Static Badge](https://img.shields.io/badge/platform-android-brightgreen?style=flat-square&label=platform)
+![Static Badge](https://img.shields.io/badge/platform-ios-red?style=flat-square&label=platform)
+![Static Badge](https://img.shields.io/badge/platform-desktop-blue?style=flat-square&label=platform)
+![Static Badge](https://img.shields.io/badge/platform-web-orange?style=flat-square&label=platform)
 # KMP flavorizr
 
 A Gradle plugin for configuring build flavors (variants) across Android and iOS in Kotlin Multiplatform projects. Define
@@ -102,8 +110,9 @@ enum class Flavor(val appName: String) {
     PRODUCTION(appName = "My App");
 
     companion object {
-        fun fromName(name: String): Flavor =
-            entries.first { it.name.equals(name, ignoreCase = true) }
+      val current: Flavor? = DEVELOPMENT
+      fun fromName(name: String): Flavor =
+        entries.first { it.name.equals(name, ignoreCase = true) }
     }
 }
 ```
@@ -360,5 +369,6 @@ Apache License 2.0
 
 Contributions are welcome, please open a branch and submit a PR.
 
-KMP Flavorizr is inspired by [Flutter Flavorizr](https://pub.dev/packages/flutter_flavorizr)
-and [psuzn's article](https://sujanpoudel.me/blogs/managing-configurations-for-different-environments-in-kmp/)
+KMP Flavorizr is inspired by <a href="https://pub.dev/packages/flutter_flavorizr" target="_blank">Flutter Flavorizr</a>
+and <a href="https://sujanpoudel.me/blogs/managing-configurations-for-different-environments-in-kmp/" target="_blank">
+psuzn's article</a>
